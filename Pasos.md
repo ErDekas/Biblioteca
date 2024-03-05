@@ -17,25 +17,26 @@ Crea una clase llamada, por ejemplo, DatabaseConnection.
 En esta clase, establece la conexión a la base de datos usando el controlador JDBC.
 java
 Copy code
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+    
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.SQLException;
 
-public class DatabaseConnection {
+    public class DatabaseConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/tu_base_de_datos";
     private static final String USER = "tu_usuario";
     private static final String PASSWORD = "tu_contraseña";
 
-    public static Connection getConnection() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Error al conectar a la base de datos", e);
+        public static Connection getConnection() {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                return DriverManager.getConnection(URL, USER, PASSWORD);
+            } catch (ClassNotFoundException | SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Error al conectar a la base de datos", e);
+            }
         }
     }
-}
 Asegúrate de reemplazar tu_base_de_datos, tu_usuario y tu_contraseña con tus propias configuraciones.
 
 Paso 3: Utilizar la conexión en tu aplicación
@@ -44,22 +45,23 @@ Crear una clase de prueba:
 Crea una clase de prueba para verificar la conexión.
 java
 Copy code
-import java.sql.Connection;
-import java.sql.SQLException;
 
-public class TestDatabaseConnection {
-    public static void main(String[] args) {
-        try (Connection connection = DatabaseConnection.getConnection()) {
-            if (connection != null) {
-                System.out.println("Conexión exitosa");
-            } else {
-                System.out.println("Error al conectar");
+    import java.sql.Connection;
+    import java.sql.SQLException;
+
+    public class TestDatabaseConnection {
+        public static void main(String[] args) {
+            try (Connection connection = DatabaseConnection.getConnection()) {
+                if (connection != null) {
+                    System.out.println("Conexión exitosa");
+                } else {
+                    System.out.println("Error al conectar");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
-}
 Paso 4: Ejecutar y verificar
 Ejecutar el programa de prueba:
 
