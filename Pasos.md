@@ -1,6 +1,6 @@
 # PASOS PARA CONFIGURAR LA API
 
-Paso 1: Agregar el controlador JDBC a tu proyecto
+* Paso 1: Agregar el controlador JDBC a tu proyecto
 Descargar el controlador JDBC:
 
 Por ejemplo, si estás usando MySQL, puedes descargar el controlador desde MySQL Connector/J.
@@ -10,13 +10,14 @@ Agregar el controlador a tu proyecto:
 Abre IntelliJ IDEA.
 Haz clic derecho sobre la carpeta "lib" en tu proyecto y selecciona "Add as Library" (Agregar como biblioteca).
 Selecciona el archivo JAR del controlador JDBC que has descargado.
-Paso 2: Configurar la conexión a la base de datos
+
+* Paso 2: Configurar la conexión a la base de datos
 Crear una clase para manejar la conexión:
 
 Crea una clase llamada, por ejemplo, DatabaseConnection.
 En esta clase, establece la conexión a la base de datos usando el controlador JDBC.
-java
-Copy code
+
+# java Copy code
     
     import java.sql.Connection;
     import java.sql.DriverManager;
@@ -39,12 +40,12 @@ Copy code
     }
 Asegúrate de reemplazar tu_base_de_datos, tu_usuario y tu_contraseña con tus propias configuraciones.
 
-Paso 3: Utilizar la conexión en tu aplicación
+* Paso 3: Utilizar la conexión en tu aplicación
 Crear una clase de prueba:
 
 Crea una clase de prueba para verificar la conexión.
-java
-Copy code
+
+# java Copy code
 
     import java.sql.Connection;
     import java.sql.SQLException;
@@ -62,7 +63,7 @@ Copy code
             }
         }
     }
-Paso 4: Ejecutar y verificar
+* Paso 4: Ejecutar y verificar
 Ejecutar el programa de prueba:
 
 Ejecuta la clase de prueba TestDatabaseConnection para verificar la conexión.
