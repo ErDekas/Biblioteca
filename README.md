@@ -18,4 +18,4 @@ Usa la API para ejecutar consultas y recuperar datos de tu base de datos. La API
 
 Usa los objetos Java en tu aplicación. Una vez que hayas recuperado datos de tu base de datos y los hayas convertido en objetos Java, puedes usar esos objetos en tu aplicación según sea necesario.
 
-/*
+*/
