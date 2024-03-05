@@ -1,4 +1,4 @@
-#PASOS PARA CONFIGURAR LA API
+# PASOS PARA CONFIGURAR LA API
 
 Paso 1: Agregar el controlador JDBC a tu proyecto
 Descargar el controlador JDBC:
