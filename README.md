@@ -2,7 +2,7 @@
 Biblioteca en la que se almacenan Libros y Usuarios.
 
 
-/*Recordatorio:
+*Recordatorio:*
 
 ¡Hola! Parece que estás buscando usar una API para convertir datos de una base de datos a código Java. Hay varias maneras de abordar esto, y trataré de brindarte una guía adaptada a tu nivel de conocimiento.
 
@@ -18,4 +18,3 @@ Usa la API para ejecutar consultas y recuperar datos de tu base de datos. La API
 
 Usa los objetos Java en tu aplicación. Una vez que hayas recuperado datos de tu base de datos y los hayas convertido en objetos Java, puedes usar esos objetos en tu aplicación según sea necesario.
 
-*/
